@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
 	<title>SpyOS</title>
+
+	<script type='text/javascript'>
+	function validateForm() {
+		var x = document.forms["myForm"]["fname"].value;
+		if (x == "1234") {
+			return true;
+		}
+		return false;
+	} 
+	</script>
 </head>
 
 <body class="home">
-	<h1>Bienvenue sur SpyOS, veuillez observer autours de vous pour trouver le code.</h1>
+	<h1>SpyOS</h1>
+	<h2>Bienvenue sur SpyOS, veuillez observer autours de vous pour trouver le code.</h2>
+	<p></p>
+	<form name="form1" method="" action="action.html" onsubmit="return validateForm(this)" method="post">
+		<input type="text" name="Code : " value=""/><br />
+		<input type="submit"/>
+	</form>
 </body>
 </html>
