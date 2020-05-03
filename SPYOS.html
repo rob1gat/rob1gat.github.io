@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SpyOS</title>
+</head>
+
+<body class="home">
+	<script>
+		function analyseCode()
+		{
+			textJSON = '{"ML8": "Il semble que le laboratoire ait été mis sans dessus dessous. Il parait desert. Que s\'est-t-il passé?", "L2U": "L\'analyse de la salle révèle des traces de sang. Il y a eu du grabuge.", "070": "C\'est le générateur électrique principal, il est endommagé. Réparé, il permettrait sans doute d\'ouvrir l\'accès à d\'autres salles du laboratoire.", "KXM":"Les caméras de surveillances ont toutes explosé.", "RDM":"Un morceau de fusible.", "BAZ":"Un morceau de fusible.", "MON":"Un morceau de fusible.", "GPZ":"Un morceau de fusible.", "T19":"Un morceau de fusible.", "810":"Il semble que le générateur soit surchargé. Pour le réparer il faudrait ramener son potentiel en sortie à 0.", "CK3":"C\'est un Z0UZ3000! Attention c\'est une arme de destruction massive. S\'il vous voit il vous poursuivra, s\'il vous touche il vous expulsera tout en bas du laboratoire!", "KI5":"L\'analyse du Z0UZ3000 indique que son point faible se trouve sous ces couches métaliques. Il faut les enlever une par une.","K1O":"C\'est une pile chimique, il faut lui apporter les éléments indiqués pour qu\'elle fonctionne.","7PC":"On dirait bien que le Z0UZ3000 a dévasté cette partie du laboratoire aussi, il y a des flaques de potions partout au sol.","JV1":"Il est indiqué qu\'il faut faire très attention avec les potions Ballonus et Demonus. Pour mettre fin à leur effet, il faut, pour une des deux potions (l\'analyse ne précise pas laquelle), faire écouter du JUL au patient, et pour l\'autre, lui mettre un doigt sur le front.","BeginPlan":"Bonjour fidèles agents. Grâce aux coordonnées que vous avez obtenues, nous avons pu envoyer un de nos satellites en reconnaissance du terrain. Nous y avons découvert une base secrète très bien gardée. Nous vous envoyons le plan de cette base, avec les plans de rondes des gardes que nous avons pu analyser. <P> En plus des gardes qui peuvent voir à 10 mètres devant eux ainsi qu\’en diagonale, cette base est également gardée par 4 vigies pouvant voir à 20 mètres sur les côtés, et à 10 mètres en diagonale d\'après nos estimations. Nous avons également deux autres vigies à moindre hauteur qui, elles, pourraient voir à 10 mètres sur les côtés. La présence d\'une grande tour centrale est également un danger. Elle semble projeter un faisceau lumineux d\'une portée de 30 mètres, qui est en constante rotation dans le sens horaire. Tout ce petit monde est constamment à l\’affut, ne vous faites pas prendre. <\P> <P>Evidemment, vous n\’avez pas de temps à perdre, et revenir sur vos pas ne servirait à rien si ce n\’est laisser plus d\’empreintes au sol. De plus, ne prenez pas les chemins des gardes, ils le remarqueraient. Si vous n\’avez pas le choix, sautez par-dessus leur trajet de ronde. <\P> <P>Bonne chance, et menez à bien votre mission<\P>","B3B":"Chers agents. Nous avons réussi à décoder ce code extrêmement long et ultra compliqué, et nous avons ainsi pu infiltrer le système de sécurité. Nous avons donc désactivé les faisceaux laser. Vous allez entrer dans une zone extrêmement bien gardée, nous vous envoyons un plan de la zone. Nous avons réussi à établir le nombre de gardes qui protègent certaines salles, mais nous ne savons pas combien il y en a au total, bien que chaque parcelle de la zone soit gardée. Trouvez leurs positions avant de les neutraliser. Séparez vous ensuite en deux équipes pour plus d\'efficacité. L\'une ira dans la salle des machines, l\'autre dans la salle des opérations. Menez à bien cette mission. Keur keur sur vous les bros","PHM":"Vous entendez un message codé  -- - -. - - .-. - .-   ,   ... -- .... .-. .... ...","FSP":"On dirait une clé de codage. 1=. 2=- 4=.-","Surgutsky":"Bravo chers agents, vous avez réussi à localiser le laboratoire secret du docteur Zouz. Félicitations, et en avant pour de nouvelles aventures palpitantes!"}';
+			var x = document.getElementById("code");
+			var code = x.value;
+			obj = JSON.parse(textJSON);
+			document.getElementById("display").innerHTML = obj[code];
+		}
+
+		
+	</script>
+	<h1>SpyOS</h1>
+	<h2>Bienvenue sur SpyOS, veuillez entrer un code pour l'analyser.</h2>
+	<p></p>
+	<p id="display"></p>
+	<input type="text" id="code"/>
+	<button onclick="analyseCode()">OK</button>
+</body>
+</html>
