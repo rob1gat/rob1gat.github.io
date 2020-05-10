@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SpyOS</title>
+</head>
+
+<body class="home">
+	<script>
+		function analyseCode()
+		{
+			textJSON = '{"M7N": "", "IBH": "Données introuvables", "1B2": "", "QVT": "", "XXF": "", "RTN": "Données introuvables", "7HN": "Données introuvables", "8QZ": "Données introuvables", "M3G": "", "NYR": "La prison du Dr. Zouz. L’ancien espion Mc LeDim y a été emprisonné. On n’a plus jamais entendu parler de lui…", "FZ9": "A mes camarades espions, j’ai creusé un tunnel qui atteint un coffre-fort dans lequel vous trouverez la clé pour sortir.", "BGAEFCIDH": "Vous avez réussi à ouvrir le coffre-fort. Maintenant, prenez la clef et revenez à l’entrée de la prison. Vous pouvez sortir!", "KJP": "La cave du Dr. Zouz. Qui sait quelle atrocité s’y cache…", "WKG": "Ce monstre est le fruit de l’imagination du Dr. Zouz. Trouvez de quoi l’empêcher de vous attaquer, car une fois réveillé, il ne s’arrête plus.", "NO3": "Les toilettes du Dr. Zouz. Ca pue du cul...", "0DY": "La salle de bain du Dr. Zouz. Faites que l’agent Redstone se lave bon sang! Cependant, on dirait qu’il faut une clef pour l’ouvrir...", "MES": "Chers agents, l’agence a réussi à localiser un objet qui vous permettra de vous repérer plus facilement dans là où vous êtes. Le château est un labyrinthe dont les salles changent en permanence. L’objet se trouve au point le plus haut du château.", "4GY": "Vers le salon. Attention, il y a des gardes, déguisez-vous en l’un d’eux pour passer inaperçu.", "T3S": "La tour du temps est le plus haut point du château du Dr. Zouz. C’est un endroit mystérieux dans lequel personne ne sait ce qu’il se passe. On dirait que c’est fermé à clef… Mais la serrure est étrange...", "CQKOD": "Vous avez activé les 5 leviers. Vous sentez un tremblement… Quelque chose a changé…", "DQKCO": "Vous avez activé les 5 leviers. Un mot taupe apparaît non! “Temps” (vous êtes obligés de le dire à tout le monde).", "0B5": "L’observatoire du château du Dr. Zouz… Attendez, c’était pas la prison ici? En tout cas c’est fermé, et la serrure est étrange…", "G1A": "Vous êtes arrivés, tenez vous près l’un de l’autre car vous risquerez de vous y perdre… Tenez bon, et allez niquer sa grande race à Zouz!"}';
+			var c = document.getElementById("code");
+			var code = c.value;
+			obj = JSON.parse(textJSON);
+			document.getElementById("display").innerHTML = obj[code];
+			changeImage(code)
+		}
+		
+		function changeImage(element)
+		{
+			var x = document.getElementById("image0");
+			var v = x.getAttribute("src");
+			if(element == "M7N")
+				v = "M7N.jpg";
+			else if(element == "1B2")
+				v = "1B2.jpg";
+			else if(element == "QVT")
+				v = "QVT.jpg";
+			else if(element == "XXF")
+				v = "XXF.jpg";
+			else if(element == "M3G")
+				v = "M3G.jpg";
+			else
+				v = "";
+			x.setAttribute("src", v);
+		}
+
+	</script>
+	<h1>SpyOS</h1>
+	<h2>Bienvenue sur SpyOS, veuillez entrer un code pour l'analyser.</h2>
+	<h3></h3>
+	<img id="image0" src=""/>
+	<p></p>
+	<p id="display"></p>
+	<input type="text" id="code"/>
+	<button onclick="analyseCode()">OK</button>
+</body>
+</html>
