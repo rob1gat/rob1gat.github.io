@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>nul os</title>
+</head>
+
+<body class="home">
+	<script>
+		function analyseCode()
+		{
+			textJSON = '{"yp8":"ah bah ça c est sur, space poste, ah bah ça oui", "2lv" : "chais pas trop ce que c\'est, on dirait un signe", "l02":"c est dans un quartier qui fait 35 cases", "sae":"ce cartier la j ai pas dinfos", "lnq":"18 cases en tout cui la", "zpx":"21 caz pour ce cartier", "z1l":"i fé 7 cases de haut", "cgb":"ça ça fait 30 cases", "7xy":"", "g5w":"", "rwh":"", "nyb":""}';
+			var x = document.getElementById("code");
+			var code = x.value;
+			
+			document.getElementById("display").innerHTML = "";
+
+			if(code == "7xy")
+			{
+				document.getElementById("maj").style.visibility = "visible";
+				return;
+			}
+
+			obj = JSON.parse(textJSON);
+			document.getElementById("display").innerHTML = obj[code];
+		}
+
+		
+	</script>
+	<h1>nul os</h1>
+	<h2>c est nul os. sI TU VEUX tu peux scanner qq chose pour voir c quoi</h2>
+	<p></p>
+	<button id="maj" onclick='window.location.href="SPACEOS.html";' style="visibility:hidden;">Mettre à jour vers Space OS!</button>
+	<p id="display"></p>
+	<input type="text" id="code"/>
+	<button onclick="analyseCode()">ici c est le bouton ok</button>
+</body>
+</html>
